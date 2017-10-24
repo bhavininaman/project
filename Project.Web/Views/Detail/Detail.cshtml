@@ -1,0 +1,23 @@
+﻿@using Project.Web.Models;
+@model ProductModel
+@{
+    ViewBag.Title = "Detail";
+}
+
+<h2>Detail</h2>
+
+<div id="detail">
+    <h3>@Model.product</h3>
+    @if (!String.IsNullOrEmpty(Model.imageName))
+    {
+        <img class="img-responsive" src="@Url.Content("~/Content/images/" + Model.imageName)" alt="@Model.product" />
+    }
+    else
+    {
+        <img class=" img-responsive" src="@Url.Content("~/Content/images" )
+    }
+
+
+</div>
+
+<img class="img-responsive" src="@Url.Content("~/images/tofurkey.jpg")" alt="@Model.Name" />

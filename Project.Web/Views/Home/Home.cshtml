@@ -1,0 +1,27 @@
+﻿@using Project.Web.Models;
+@model List<ProductModel>
+
+    @{
+        ViewBag.Title = "Home";
+    }
+
+    <h2>Home</h2>
+    
+    @foreach(ProductModel p in Model)
+    {
+        <p>@p.product</p>
+        <p>@p.description</p>
+        <p>$@p.price</p>
+      
+       
+        <img src=" @Url.Content("~/Content/images/" + p.imageName)" />
+       
+
+        }
+
+
+
+    @*<div class="container-fluid">*@
+           
+
+    
