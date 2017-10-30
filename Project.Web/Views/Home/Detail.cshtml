@@ -12,12 +12,17 @@
     {
         <img class="img-responsive" src="@Url.Content("~/Content/images/" + Model.imageName)" alt="@Model.product" />
     }
-    @*else
+    else
     {
-        <img class=" img-responsive" src="@Url.Content("~/Content/images" )
-    }*@
+        <img class=" img-responsive" src="@Url.Content("~/Content/images" )" alt="@Model.product" />
+    }
+    <p class=" text-muted">@Model.description</p>
+    <h4>@Model.productId </h4>
+    <h4>@Model.product</h4>
+    <h4>@Model.price</h4>
+    <h4>@Model.categoryId</h4>
+    <h4>@Model.imageName</h4>
 
+    
 
 </div>
-
-@*<img class="img-responsive" src="@Url.Content("~/images/tofurkey.jpg")" alt="@Model.Name" />*@

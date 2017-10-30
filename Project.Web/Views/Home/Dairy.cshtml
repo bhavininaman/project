@@ -1,0 +1,10 @@
+﻿@using Project.Web.Models
+@model List<ProductModel>
+
+<h2>Dairy</h2>
+
+
+@foreach (ProductModel p in Model)
+{
+    <a href="@Url.Action("Detail","Home", new {id=p.productId })"> <img src=" @Url.Content("~/Content/images/" + p.imageName)" /></a>
+}

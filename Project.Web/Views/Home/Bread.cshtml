@@ -1,0 +1,12 @@
+﻿@using Project.Web.Models;
+@model List<ProductModel>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Bread";
+}
+
+<h2>Bread</h2>
+@foreach (ProductModel p in Model)
+{
+    <a href="@Url.Action("Detail","Home", new {id=p.productId })"> <img src=" @Url.Content("~/Content/images/" + p.imageName)" /></a>
+}

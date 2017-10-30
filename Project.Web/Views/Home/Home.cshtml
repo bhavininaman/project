@@ -14,7 +14,7 @@
         <p>$@p.price</p>
       
        
-        <img src=" @Url.Content("~/Content/images/" + p.imageName)" />
+       <a href="@Url.Action("Detail","Home", new {id=p.productId })"> <img src=" @Url.Content("~/Content/images/" + p.imageName)" /></a>
        
 
         }

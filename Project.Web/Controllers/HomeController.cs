@@ -18,5 +18,44 @@ namespace Project.Web.Controllers
             List<ProductModel> model = dal.GetAllProducts();
             return View("Home", model);
         }
+
+        public ActionResult Dairy(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            List<ProductModel> dairy = dal.GetCategory(id);
+            return View("Dairy", dairy);
+        }
+        public ActionResult Bread(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            List<ProductModel> model = dal.GetCategory(id);
+            return View("Bread", model);
+        }
+        public ActionResult Fruits(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            List<ProductModel> model = dal.GetCategory(id);
+            return View("Fruits", model);
+        }
+        public ActionResult Vegetables(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            List<ProductModel> model = dal.GetCategory(id);
+            return View("Vegetables", model);
+        }
+        public ActionResult PicSupplies(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            List<ProductModel> model = dal.GetCategory(id);
+            return View("PicSupplies", model);
+        }
+
+        public ActionResult Detail(int id)
+        {
+            ProductDAL dal = new ProductDAL();
+            ProductModel item = dal.GetProduct(id);
+            return View("Detail", item);
+
+        }
     }
 }

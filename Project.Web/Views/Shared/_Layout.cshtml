@@ -17,21 +17,28 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+           
+            </ul>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    @Html.ActionLink("Home", "Home", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                    <li>@Html.ActionLink("Bread", "Bread", "Home", new { id = 5 }, null)</li>
+                    <li>@Html.ActionLink("Dairy", "Dairy", "Home", new { id = 1 }, null)       </li>
+                    <li>@Html.ActionLink("Vegetables", "Vegetables", "Home", new { id = 3 }, null)  </li>
+                    <li>@Html.ActionLink("Fruits", "Fruits", "Home", new { id = 2 }, null)</li>
+                    <li>@Html.ActionLink("PicSupplies", "PicSupplies", "Home", new { id = 4 }, null)</li>
                 </ul>
             </div>
-        </div>
+        
     </div>
     <ul>
         <li>
-            @Html.ActionLink("Bread", "Index", "Bread")
-            @Html.ActionLink("Dairy", "Index", "Dairy")
-            @Html.ActionLink("Detail", "Index", "Detail")
-            @Html.ActionLink("Fruits","Index","Fruits")
-            @Html.ActionLink("PicSupplies", "Index", "PicSupplies")
+            
 
         </li>
     </ul>
